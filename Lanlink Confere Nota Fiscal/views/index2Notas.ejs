@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width-device-width, initial-scale=1">
+	<title>Conferencia NF</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/estilo2.css">
+	<link rel="icon" href="https://www.lanlink.com.br/wp-content/uploads/2017/02/cropped-logo_512-32x32.png">
+	
+</head>
+<body>
+	
+	<!-- Imagem LLK logo -->
+	<a href="/">
+        <img src="imagens/lanlink1.png" id="llk_img2">
+    </a>
+	
+
+
+	<!-- Mensagem de exibição -->
+	<p id="msgResult" >
+		<font size="15" face="arial">
+			<b>Confere Nota Fiscal</b>
+		</font>
+	</p>
+    	
+     	
+
+     	<!-- /#list -->
+     	<div id="list">
+     	
+     		<div class="table-responsive col-md-12">
+        		<table  class="table table-striped" cellspacing="0" cellpadding="0">
+            		<thead id="buscaNotas">
+                		<tr>
+                    		<th>Empresa</th>
+                    		<th>Filial</th>
+                    		<th>Fornecedor</th>
+							<th>Nota</th>
+							<th>Série</th>
+							<th>Data Emissão</th>
+							<th>Data de Entrega</th>
+                    		<th class="actions">Ação</th>
+                 		</tr>
+            		</thead>
+            		<tbody id="buscaNotas1">
+						
+						<% if(contratos.length !== 0) { %>
+							<% contratos.forEach(function(item) { %>
+                		<tr>
+							
+                    		<!--<td><%= item.name %></td>-->
+							<th><%= item.Empresa%></th>
+                    		<th><%= item.Filial%></th>
+                    		<th><%= item.Fornecedor%></th>
+							<th><%= item.Nota%></th>
+							<th><%= item.Serie%></th>
+							<th><%= item.datemi%></th>
+							<th><%= item.datent%></th>
+                    		<td class="actions">
+                        		<a class="btn btn-info btn-xs" href="/nota/<%= item.Empresa %>/<%= item.Filial %>/<%= item.Serie %>/<%= item.Nota %>">Visualizar Nota Fiscal</a>
+                        		<!--<a class="btn btn-success btn-xs" href="/downloadContrato/<%= item.id %>">Baixar arquivos de contrato</a>-->
+
+                                <!--<a class="btn btn-warning btn-xs" href="edit.html">Do</a>-->
+                        		
+                                    <!--<a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a> -->
+								</td>
+								
+							</tr>
+							<% }) %>
+							<% } else { %>
+								<tr>
+									<td>Nenhuma informação encontrada</td>
+								</tr>
+								<% } %>
+						
+            		</tbody>
+        	    </table>
+ 
+     	</div>
+     	</div> <!-- /#list -->
+ 
+
+
+ 	</div>  <!-- /#main -->
+	
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

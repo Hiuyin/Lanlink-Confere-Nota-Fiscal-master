@@ -1,0 +1,107 @@
+#llk_img2
+{
+  width: 220px;
+  height: 50px;
+  margin-top: 1%;
+  margin-left: 1%;
+}
+
+
+#msgResult3
+{
+	 margin-top: 1%;
+	 text-align: center
+	 
+  	
+}
+
+
+#btnVoltar
+{
+	margin-top: -35px;
+	margin-left: 80%;
+}
+
+#btnAnexar
+{
+	margin-top: -100px;
+	margin-left: 70%;
+}
+
+#btnDownload
+{
+	margin-top: -60px;
+	margin-left: 58%;
+}
+
+#list
+{
+
+	margin-top: 30px
+	
+}
+
+
+.form {
+	position: relative;
+	z-index: 1;
+	background: #FFFFFF;
+	max-width: 900px;
+	margin: 0 auto 10px;
+	padding: -50px;
+	text-align: center;
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+	margin-top: 2%;
+	
+  }
+
+  #customers {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+	overflow-y: auto
+    
+  }
+  
+  #customers td, #customers th {
+	border: 1px solid #ddd;
+	padding: 8px;
+	text-align: left
+  }
+  
+  #customers tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #customers tr:hover {background-color: #ddd;}
+  
+  #customers th {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: left;
+	background-color:#272c30;
+	color: white;
+  }
+/*-------------------------------------------------*/
+  #customers1 {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+	overflow-y: auto
+  }
+  
+  #customers1 td, #customers1 th {
+	border: 1px solid #ddd;
+	padding: 8px;
+	text-align: center
+  }
+  
+  #customers1 tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #customers1 tr:hover {background-color: #ddd;}
+  
+  #customers1 th {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: center;
+	background-color:#272c30;
+	color: white;
+  }

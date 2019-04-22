@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width-device-width, initial-scale=1">
+	<title>Conferencia NF</title>
+	<link rel="stylesheet" href="/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/estilo3.css">
+    <script src="/js/jquery.min.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+	<link rel="icon" href="https://www.lanlink.com.br/wp-content/uploads/2017/02/cropped-logo_512-32x32.png">
+
+</head>
+<body>
+
+	<!-- Imagem LLK logo -->
+	<div>
+		<a href="/">
+        	<img src="/imagens/lanlink1.png" id="llk_img2">
+    	</a>
+	</div>
+
+	
+
+    <!-- Mensagem de exibição -->
+	<div id= "msgResult3">
+		<p>
+  			<font size="5" face="arial" color="#01427a" >
+				<b>Informações da Nota</b>
+			</font>
+		</p>
+	</div>
+
+	<!--Lista Alternativa-->	 
+	<div class="form">
+		<div id="main" class="container-fluid">	
+			<div id="list">
+				<table id="customers" class="table table-striped" cellspacing="0" cellpadding="0">
+					<tr>
+				  		<th>Código do Item</th>
+				  		<th>Descrição</th>
+				  		<th>Descrição Completa</th>
+				  		<th>Valor</th>
+					</tr>
+					<% if(notas.length !== 0) { %>
+						<% notas.forEach(function(item) { %>
+					<tr>
+						<td><%=item.codpro%></td>
+						<td><%=item.DesPro%></td>
+						<td><%=item.cplipc%></td>
+						<td><%=item.VlrBruSer.toLocaleString("pt-BR", {style: "currency", currency: "BRL", minimumFractionDigits: 2})%></td>
+					</tr>
+					<% }) %>
+						<% } else { %>
+							<tr>
+								<td>Nenhuma informação encontrada</td>
+							</tr>
+						<% } %>
+				</table>
+				<table id="customers1" class="table table-striped" cellspacing="0" cellpadding="0">
+					<tr> 
+				  		<th>Centro de Custo</th>
+				  		<th>Total do Rateio</th>
+					</tr>
+					<% if(rateios.length !== 0) { %>
+						<%console.log(rateios)%>
+						<% rateios.forEach(function(item) { %>
+					<tr> 
+						<td><%=item.CodCcu%></td>
+						<td><%=item.vlrrat.toLocaleString("pt-BR", {style: "currency", currency: "BRL", minimumFractionDigits: 2})%></td>
+				  </tr>
+				  <% }) %>
+						<% } else { %>
+							<tr> 
+								<td>sem rateio definido</td>
+						  </tr>
+						  <% } %>
+			  	</table>  
+			</div>
+		</div>
+	</div>    
+
+
+
+
+
+    <!-- Container Modal -->
+    <div class="container">
+	
+	<!--Modal de Confirmação-->
+	<div class="modal fade" id="confirm" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content"> <!-- Modal content-->
+					
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+					</div>
+			
+					<div class="modal-body">
+						<div>
+							Você tem certeza que deseja excluir esse documento ?
+						</div>
+					</div>
+			
+					<div class="modal-footer">
+						<a class="btn btn-danger excluir-documento-modal" href="" data-dismiss="modal">Excluir</a> 
+						<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>     
+					</div>
+				</div>
+			</div>
+		</div>
+</body>
+</html>
