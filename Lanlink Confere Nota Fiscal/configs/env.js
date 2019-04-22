@@ -5,7 +5,7 @@ if (process.env.NODE_ENV === undefined) {
 const production = {
     server: {
         host: 'LLK85SH20113',
-        port: '1234'
+        port: '1235'
     },
     database: {
         user: 'UsuarioPesquisa',
